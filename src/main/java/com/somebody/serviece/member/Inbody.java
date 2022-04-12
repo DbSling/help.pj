@@ -14,7 +14,7 @@ import com.somebody.db.CommonMethod;
 import com.somebody.db.MapperBon;
 import com.somebody.db.MapperDong;
 import com.somebody.db.MapperUone;
-import com.somebody.db.MapperYoung;
+import com.somebody.db.MapperYong;
 
 import beans.Inbodys;
 

@@ -4,7 +4,6 @@ import java.util.List;
 
 import beans.Inbodys;
 import beans.Members;
-import beans.YMemberDt;
 
 public interface MapperUone {
 	

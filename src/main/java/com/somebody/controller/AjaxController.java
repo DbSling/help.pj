@@ -46,15 +46,9 @@ public class AjaxController {
 	Equipment eq;
 	@Autowired
 	Pay pa;
-	@Autowired
-	private MapperUone mu;
-
 	public AjaxController(){}
 	
 	//Bon
-
-	
-
 	@SuppressWarnings("unchecked")
 	@RequestMapping(value = "/meMg", method = RequestMethod.POST)
 	public List<Members> meMg(Model model, @RequestBody Members[] me) {
@@ -147,11 +141,6 @@ public class AjaxController {
 		this.lss.backController("L02",ls[0],model.addAttribute("ls", ls[0]));
 		return (List<Lessons>)model.getAttribute("lsList");
 	}
-	/*@RequestMapping(value = "/getLsCaList", method = RequestMethod.POST)
-	public void getLsCaList(Model model, @RequestBody Lessons[] ls) {
-		this.lss.backController("L03",ls[0],model);
-	}*/
-	
 	@SuppressWarnings("unchecked")
 	@RequestMapping(value = "/insLsPay", method = RequestMethod.POST)
 	public List<Lessons> insLsPay(Model model, @RequestBody Lessons[] ls) {
@@ -169,9 +158,6 @@ public class AjaxController {
 		this.lss.backController("L06",ls[0],model);
 		return (List<Lessons>)model.getAttribute("lsList");
 	}
-
-
-
 
 	//Yong
 		@SuppressWarnings("unchecked")
@@ -274,11 +260,6 @@ public class AjaxController {
 			this.lss.backController("L11", ls[0] ,model);
 			return (List<Equipments>) model.getAttribute("sfCode");
 		}
-
-
-
-		
-		
 
 
 		//UONE

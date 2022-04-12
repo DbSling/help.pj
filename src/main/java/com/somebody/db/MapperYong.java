@@ -11,7 +11,7 @@ import beans.Pays;
 import beans.Staffs;
 import beans.YMemberDt;
 
-public interface MapperYoung {
+public interface MapperYong {
 	//Equipments
 	public List<Equipments> goodsList(Equipments eq);
 	public List<Equipments> searchGoods(Equipments eq);

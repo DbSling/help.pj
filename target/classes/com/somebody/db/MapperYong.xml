@@ -4,7 +4,7 @@
 
 
 
-<mapper namespace="com.somebody.db.MapperYoung">
+<mapper namespace="com.somebody.db.MapperYong">
 	<select id="goodsList" resultType="beans.Equipments"
 		parameterType="beans.Equipments">
 		select * from kmasters.GoodsView where ctCode =
@@ -198,7 +198,7 @@ SELECT DISTINCT IDCOUNT AS idCount,
    FROM KMASTERS.ID INNER JOIN KMASTERS.DA ON ID.IDDACODE = DA.DACODE
                     INNER JOIN KMASTERS.TA ON  ID.IDIBCODE = TA.TAIDIBCODE
                     INNER JOIN KMASTERS.EX ON TA.TAEXCODE = EX.EXCODE
-                    INNER JOIN KMASTERS.PE ON EX.EXCODE = PE.PETAEXCODE
+                    INNER JOIN KMASTERS.PE ON EX.EXCODE = PE.PETAEXCODE and pe.petaidibcode = id.idibcode
                     INNER JOIN KMASTERS.ST ON PE.PESTCODE = ST.STCODE
    WHERE SUBSTR(IDIBCODE,6,8) =(SELECT SUBSTR(MAX(TAIDIBCODE),6,8) FROM KMASTERS.TA WHERE SUBSTR(TAIDIBCODE,1,5) = '${meCode}')
                                          AND SUBSTR(IDIBCODE,1,5) = ${meCode} ORDER BY DANAME

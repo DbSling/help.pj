@@ -15,7 +15,7 @@ import org.springframework.web.servlet.ModelAndView;
 
 import com.somebody.db.CommonMethod;
 import com.somebody.db.MapperBon;
-import com.somebody.db.MapperYoung;
+import com.somebody.db.MapperYong;
 import com.somebody.serviece.member.Member;
 
 import beans.Centers;
@@ -28,7 +28,7 @@ import kr.co.icia.plzec.services.ProjectUtils;
 public class Authenticaion extends CommonMethod {
 
 	@Autowired
-	private MapperYoung my;
+	private MapperYong my;
 	@Autowired
 	private MapperBon mb;
 
@@ -57,10 +57,6 @@ public class Authenticaion extends CommonMethod {
 
 	public ModelAndView backController(String sCode, Centers ct) {
 		switch (sCode) {
-
-		case "P04":
-			getSelectCenter(ct);
-			break;
 		case "J02":
 			goJoinPage();
 			break;
@@ -382,10 +378,6 @@ public class Authenticaion extends CommonMethod {
 		return this.mav;
 	}
 
-	public void joinForm(Model model) {
-
-	}
-
 	public void ctJoin(Centers ct) {
 		page = "join";
 		String msg = "가입실패~!";
@@ -420,13 +412,4 @@ public class Authenticaion extends CommonMethod {
 		mav.addObject("msg", msg);
 		mav.setViewName(page);
 	}
-
-	public void psJoin(Centers ct) {
-
-	}
-
-	public void getSelectCenter(Centers ct) {
-
-	}
-
 }

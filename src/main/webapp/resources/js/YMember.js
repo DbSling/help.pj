@@ -174,7 +174,7 @@ function modMeDt(mecode){
 	document.getElementById("mdtitle").innerText = "회원수정";
 	var data = '<div class=\"input\"><i class=\"bx bx-user icon\"></i><input type ="text" id = "meName" placeholder="'+meDtMod.meName+'"/></div>';
 	data += '<div class=\"input\"><i class=\"bx bx-phone\"></i><input type="text" id ="meNumber" placeholder="'+meDtMod.meNumber+'" title="형식 01012341234" /></div>';
-	data += '<div class=\"input\"><i class=\"bx bx-envelope icon\"></i><input type = "email" id = "emailName" placeholder="'+meDtMod.meEmail.split('@')[0]+'"/></div>';/*<span>@<span><select id="juso">';
+	data += '<div class=\"input\"><i class=\"bx bx-envelope icon\"></i><input type = "email" id = "emailName" placeholder="'+meDtMod.meEmail+'"/></div>';/*<span>@<span><select id="juso">';
 	data += '<option value = "return">주소선택</option>'
 	data += '<option value = "daun.net">daun</option>';
 	data += '<option value = "naver.com">naver</option>';
@@ -199,7 +199,7 @@ function modMeDtAjax(mecode){
 	let name =  document.getElementById("meName");
 	let number =  document.getElementById("meNumber");
 	let email =  document.getElementById("emailName");
-	let juso =  document.getElementById("juso").value;
+	//let juso =  document.getElementById("juso").value;
 	let json = [];
 	if(name.value == ""){
 		name = name.placeholder;
@@ -212,9 +212,9 @@ function modMeDtAjax(mecode){
 		number = number.value;
 	}
 	if(email.value == ""){
-		email = email.placeholder+'@'+juso;
+		email = email.placeholder;
 	}else{
-		email = email.value+'@'+juso;
+		email = email.value;
 	}
 		json.push({ctCode : meList[0].ctCode, meCode: mecode, meName : name, meNumber : number , meEmail : email});
 		const data = JSON.stringify(json);

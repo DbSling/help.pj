@@ -32,9 +32,6 @@ public class ControllerBon {
 	@Autowired
 	HttpSession session;
 	
-
-	private static final Logger logger = LoggerFactory.getLogger(ControllerBon.class);
-
 	//bon
 	
 	@RequestMapping(value = "/", method = RequestMethod.GET)
@@ -61,7 +58,6 @@ public class ControllerBon {
 			if (pu.getAttribute("sfInfo") != null) {
 				this.auth.backControllerCT("A04", sf);
 			} else {
-				Members me = new Members();
 				this.auth.backControllerME("A04", model);
 			}
 		} catch (Exception e) {

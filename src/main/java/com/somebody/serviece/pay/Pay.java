@@ -7,7 +7,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.somebody.db.CommonMethod;
-import com.somebody.db.MapperYoung;
+import com.somebody.db.MapperYong;
 
 import beans.Pays;
 
@@ -15,7 +15,7 @@ import beans.Pays;
 public class Pay extends CommonMethod{
 
 	@Autowired
-	private MapperYoung my;
+	private MapperYong my;
 
 
 	private ModelAndView mav;

@@ -7,8 +7,7 @@
 
 <link rel="stylesheet" href="res/css/join.css" />
 <title>MemberJoin & CenterJoin</title>
-<script src="https://kit.fontawesome.com/64d58efce2.js"
-	crossorigin="anonymous"></script>
+<script src="https://kit.fontawesome.com/64d58efce2.js" crossorigin="anonymous"></script>
 <script src="res/js/YJoin.js"></script>
 </head>
 <body onload="checkMeEmailNum()" onLoad = "loadPage('${msg}')">
@@ -16,10 +15,10 @@
 	<div class="container">
 		<div class="forms-container">
 			<div class="signin-signup">
-								<form action="meJoin" class="sign-in-form" name="meJoin" method="post">
+				<form action="meJoin" class="sign-in-form" name="meJoin" method="post">
 					<h2 class="title">회원가입</h2>
 					<div class="input-field">
-						<i class="fas fa-user"></i> <input type="text" name="meCode" value="${maxMeCode.meCode}" placeholder="멤버코드" readonly/>
+						<i class="fas fa-user"></i> <input type="text" name="meCode" value="${maxMeCode.meCode}" readonly/>
 					</div>
 					<div class="input-field">
 						<i class="fas fa-user"></i> <input type="text" name="meName" placeholder="이름" spellCheck="false"

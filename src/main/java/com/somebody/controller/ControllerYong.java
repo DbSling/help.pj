@@ -20,7 +20,7 @@ import beans.Members;
 import beans.Pays;
 
 @Controller 
-public class ControllerYoung {
+public class ControllerYong {
 	@Autowired
 	Authenticaion auth;
 	@Autowired

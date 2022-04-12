@@ -8,7 +8,7 @@ import org.springframework.web.servlet.ModelAndView;
 import org.springframework.ui.Model;
 import com.somebody.db.CommonMethod;
 import com.somebody.db.MapperDong;
-import com.somebody.db.MapperYoung;
+import com.somebody.db.MapperYong;
 import beans.Staffs;
 import kr.co.icia.plzec.services.Encryption;
 
@@ -17,7 +17,7 @@ public class Staff extends CommonMethod {
 	@Autowired
 	private MapperDong md;
 	@Autowired
-	private MapperYoung my;
+	private MapperYong my;
 	private ModelAndView mav;
 	@Autowired
 	private Encryption enc;

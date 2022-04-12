@@ -53,7 +53,7 @@
    FROM KMASTERS.ID INNER JOIN KMASTERS.DA ON ID.IDDACODE = DA.DACODE
                     INNER JOIN KMASTERS.TA ON  ID.IDIBCODE = TA.TAIDIBCODE
                     INNER JOIN KMASTERS.EX ON TA.TAEXCODE = EX.EXCODE
-                    INNER JOIN KMASTERS.PE ON EX.EXCODE = PE.PETAEXCODE
+                    INNER JOIN KMASTERS.PE ON EX.EXCODE = PE.PETAEXCODE and pe.petaidibcode = id.idibcode
                     INNER JOIN KMASTERS.ST ON PE.PESTCODE = ST.STCODE
    WHERE SUBSTR(IDIBCODE,6,8) = #{ibDate1} AND SUBSTR(IDIBCODE,1,5) = #{meCode} ORDER BY DANAME ASC
    </select>
@@ -67,7 +67,7 @@
    </update>
 
    <update id="insTaState" parameterType = "beans.Inbodys">
-      UPDATE KMASTERS.PE SET PE.PESTCODE = #{peStcode} WHERE SUBSTR(PE.PETAIDIBCODE,6,14)= #{ibDate}
+      UPDATE KMASTERS.PE SET PE.PESTCODE = '${peStcode}' WHERE SUBSTR(PE.PETAIDIBCODE,6,14)= ${ibDate}
    </update>
    
    <select id="findDay" parameterType = "beans.Inbodys" resultType = "beans.Inbodys">

@@ -375,7 +375,7 @@ function insTaState(data){
 	let jsondata = [];
 	jsondata.push({ibDate:data1,peStcode:data2});
 	const clientData = JSON.stringify(jsondata);
-	
+	alert(clientData);
 	whatsend("ajax/insTaState",clientData,"eee",false,"post");
 }
 function eee(){
@@ -407,8 +407,6 @@ function checkMePw2(cctcode, mmecode){
 
 
 function checkMePw3(data){
-
-	const list = document.getElementById("profile");
 	const list2 = document.getElementById("profile2");
 	let ctCode = document.getElementById("searchct").value;
 	for(idx = 0; idx< data.length; idx++){
@@ -714,7 +712,8 @@ let meall;
 	whatsend("ajax/getLessonList",clientdata,"getmectlist",false,"post");
 	
 }
-	function getCenterListInbody(mecode){
+
+function getCenterListInbody(mecode){
 		meall = mecode;
 		let jsondata = [];
 	jsondata.push({"meCode":mecode});
@@ -1099,9 +1098,7 @@ function goPayPage(ctcode){
 
 function goJoinPage(){
 	const form = makeForm("goJoin", "goJoinPage", "POST");
-	
 	document.body.appendChild(form);
-	
 	form.submit();
 }
 

@@ -66,9 +66,8 @@
 
 				<div id="list">${list}</div>
 				<div class="mfooter">
-					<input type="button" class="mbtn" value="계정만들기"
-						onClick="goJoinPage()" /> <input type="button" class="mbtn"
-						value="비밀번호변경" onClick="sendEmailForm()" />
+					<input type="button" class="mbtn" value="계정만들기" onClick="goJoinPage()" />
+					<input type="button" class="mbtn" value="비밀번호변경" onClick="sendEmailForm()" />
 				</div>
 			</div>
 		</form>
@@ -99,10 +98,9 @@
 					</div>
 					<div id="list">${list}</div>
 					<div class="mfooter">
-						<input type="button" class="mbtn" value="계정만들기"
-							onClick="goJoinPage()" /> <input type="button" class="mbtn"
-							value="비밀번호변경" onClick="sendEmailForm()" />
-					</div>
+						<input type="button" class="mbtn" value="계정만들기" onClick="goJoinPage()" />
+					<input type="button" class="mbtn" value="비밀번호변경" onClick="sendEmailForm()" />
+				</div>
 				</div>
 			</div>
 		</form>
